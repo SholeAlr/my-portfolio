@@ -5,11 +5,9 @@ function App() {
   return (
     <Routes>
       {RoutesConfig.map((eachRoute) => (
-        <Route
-          key={eachRoute.title}
-          path={eachRoute.path}
-          element={eachRoute.element}
-        />
+        <Route key={eachRoute.path} element={eachRoute.layout}>
+          <Route path={eachRoute.path} element={eachRoute.element} />
+        </Route>
       ))}
     </Routes>
   )
