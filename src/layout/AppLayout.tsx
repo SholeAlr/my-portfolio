@@ -1,5 +1,4 @@
 import { Header } from './Header'
-import { Sidebar } from './Sidebar'
 import { Main } from './Main'
 import { useState } from 'react'
 
@@ -11,9 +10,9 @@ export const AppLayout = () => {
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      {isSidebarOpen ? <Sidebar /> : null}
 
-      <Main />
+
+      <Main isSidebarOpen={isSidebarOpen} />
     </div>
   )
 }
