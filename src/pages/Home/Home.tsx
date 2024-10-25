@@ -1,5 +1,12 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const Home = () => {
-  return <div>hi</div>
+  const navigate = useNavigate()
+
+  const navigateToGamesClick = () => {
+    navigate('/games')
+  }
+  return <div>
+    <button onClick={navigateToGamesClick}>Games</button>
+  </div>
 }
